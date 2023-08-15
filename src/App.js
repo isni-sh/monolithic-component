@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import MyInputs from "./MyInputs";
+import MyHandling from "./MyHandling";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyHandling
+        addArticle={({ title, summary, onChangeTitle, onChangeSummary }) => (
+          <MyInputs
+            name="Handle Inputs"
+            title={title}
+            summary={summary}
+            onChangeTitle={onChangeTitle}
+            onChangeSummary={onChangeSummary}
+          />
+        )}
+      />
     </div>
   );
 }

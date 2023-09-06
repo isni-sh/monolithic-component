@@ -3,7 +3,7 @@ import MyHandling from "./MyHandling";
 
 function App() {
   return (
-    <div className="Monolithich Component App">
+    <div className="My App">
       <MyHandling
         addArticle={({ title, summary, onChangeTitle, onChangeSummary }) => (
           <MyInputs
